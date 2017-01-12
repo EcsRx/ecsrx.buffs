@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.EcsRx.Examples.Types;
 using EcsRxPlugins.Buffs;
 
 namespace Assets.EcsRx.Examples.Database
@@ -17,21 +18,24 @@ namespace Assets.EcsRx.Examples.Database
                 Id = 1,
                 Name = "Poison",
                 Duration = 30000,
-                Frequency = 1000
+                Frequency = 1000,
+                Type = (short)EffectTypes.ReduceHealth
             });
 
             Effects.Add(new Effect
             {
                 Id = 2,
                 Name = "Iron Skin",
-                Duration = 15000
+                Duration = 15000,
+                Type = (short)EffectTypes.AddArmour
             });
 
             Effects.Add(new Effect
             {
                 Id = 3,
                 Name = "Nightvision",
-                Duration = 600000
+                Duration = 600000,
+                Type = (short)EffectTypes.AddViewDistance
             });
 
             Effects.Add(new Effect
@@ -39,7 +43,8 @@ namespace Assets.EcsRx.Examples.Database
                 Id = 4,
                 Name = "Regen",
                 Duration = 30000,
-                Frequency = 3000
+                Frequency = 3000,
+                Type = (short)EffectTypes.AddHealth
             });
         }
     }

@@ -34,7 +34,7 @@ namespace Assets.Examples.BuffHud.Systems
         {
             var tickSubscription = EventSystem.Receive<EffectTickedEvent>().Subscribe(x =>
             {
-                var logMessage = string.Format("{0} Ticked", x.ActiveEffect.Effect.Name);
+                var logMessage = string.Format("{0} Ticked For {1}", x.ActiveEffect.Effect.Name, x.ActiveEffect.Effect.Potency);
                 UpdateLog(logMessage);
             });
 
