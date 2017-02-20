@@ -2,7 +2,6 @@
 using Assets.EcsRx.Examples.Database;
 using Assets.EcsRxPlugins.Buffs;
 using EcsRx.Unity;
-using EcsRx.Unity.Components;
 using Zenject;
 
 namespace Assets.EcsRx.Examples
@@ -17,13 +16,13 @@ namespace Assets.EcsRx.Examples
             Database = database;
         }
 
-        protected override void GameStarting()
+        protected override void ApplicationStarting()
         {
             RegisterPlugin(new BuffsPlugin());
             RegisterAllBoundSystems();
         }
 
-        protected override void GameStarted()
+        protected override void ApplicationStarted()
         {
             var defaultPool = PoolManager.GetPool();
 
