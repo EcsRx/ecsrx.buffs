@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.EcsRxPlugins.Buffs.Events;
 using EcsRx.Events;
 using EcsRx.Extensions;
 using EcsRx.Groups;
+using EcsRx.Groups.Observable;
+using EcsRx.Plugins.Buffs.Events;
 using EcsRx.Systems;
 using UniRx;
 using UnityEngine;
@@ -21,7 +22,7 @@ namespace Assets.Examples.BuffHud.Systems
 
         public IEventSystem EventSystem { get; set; }
 
-        public IGroup TargetGroup { get { return new EmptyGroup();} }
+        public IGroup Group => new EmptyGroup();
 
         public LoggingSystem(IEventSystem eventSystem)
         {
@@ -30,23 +31,23 @@ namespace Assets.Examples.BuffHud.Systems
             _subscriptions = new List<IDisposable>();
         }
 
-        public void StartSystem(IGroupAccessor @group)
+        public void StartSystem(IObservableGroup group)
         {
             var tickSubscription = EventSystem.Receive<EffectTickedEvent>().Subscribe(x =>
             {
-                var logMessage = string.Format("{0} Ticked For {1}", x.ActiveEffect.Effect.Name, x.ActiveEffect.Effect.Potency);
+                var logMessage = $"{x.ActiveEffect.Effect.Name} Ticked For {x.ActiveEffect.Effect.Potency}";
                 UpdateLog(logMessage);
             });
 
             var effectAddedSubscription = EventSystem.Receive<EffectAddedEvent>().Subscribe(x =>
             {
-                var logMessage = string.Format("{0} Has Been Applied", x.ActiveEffect.Effect.Name);
+                var logMessage = $"{x.ActiveEffect.Effect.Name} Has Been Applied";
                 UpdateLog(logMessage);
             });
 
             var effectRemovedSubscription = EventSystem.Receive<EffectExpiredEvent>().Subscribe(x =>
             {
-                var logMessage = string.Format("{0} Has Expired", x.ActiveEffect.Effect.Name);
+                var logMessage = $"{x.ActiveEffect.Effect.Name} Has Expired";
                 UpdateLog(logMessage);
             });
 
@@ -67,7 +68,7 @@ namespace Assets.Examples.BuffHud.Systems
             }
         }
 
-        public void StopSystem(IGroupAccessor @group)
+        public void StopSystem(IObservableGroup group)
         {
             _subscriptions.DisposeAll();
         }

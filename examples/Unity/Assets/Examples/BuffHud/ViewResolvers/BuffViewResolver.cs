@@ -1,36 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
-using Assets.EcsRxPlugins.Buffs.Components;
-using Assets.Examples.BuffHud.Bindings;
 using EcsRx.Entities;
 using EcsRx.Extensions;
 using EcsRx.Groups;
-using EcsRx.Systems;
-using EcsRx.Unity.Components;
-using EcsRx.Unity.Systems;
-using EcsRxPlugins.Buffs;
+using EcsRx.MicroRx.Disposables;
+using EcsRx.MicroRx.Extensions;
+using EcsRx.Plugins.Buffs.Components;
+using EcsRx.Plugins.Buffs.Models;
+using EcsRx.Plugins.ReactiveSystems.Systems;
+using EcsRx.Plugins.Views.Components;
+using EcsRx.ReactiveData.Collections;
+using Observable = UniRx.Observable;
 using UnityEngine;
-using UniRx;
 using UnityEngine.UI;
-using Object = UnityEngine.Object;
 
 namespace Assets.Examples.BuffHud.ViewResolvers
 {
     public class BuffUISystem : ISetupSystem, ITeardownSystem
     {
-        private readonly IGroup _targetGroup = new Group(typeof(EffectableComponent), typeof(ViewComponent));
-
         private readonly GameObject _buffPrefab;
         private readonly GameObject _buffPanelGameObject;
 
         private readonly IDictionary<IEntity, IDisposable> _entitySubscriptions;
         private readonly IDictionary<ActiveEffect, IDisposable> _effectSubscription;
 
-        public IGroup TargetGroup
-        {
-            get { return _targetGroup; }
-        }
-
+        public IGroup Group => new Group(typeof(EffectableComponent), typeof(ViewComponent));
+    
         public BuffUISystem()
         {
             _entitySubscriptions = new Dictionary<IEntity, IDisposable>();
@@ -61,14 +56,14 @@ namespace Assets.Examples.BuffHud.ViewResolvers
 
         public void BindView(GameObject view, ActiveEffect effect)
         {
-            var buffImage = view.transform.FindChild("Image").GetComponent<Image>();
-            var buffText = view.transform.FindChild("Text").GetComponent<Text>();
+            var buffImage = view.transform.Find("Image").GetComponent<Image>();
+            var buffText = view.transform.Find("Text").GetComponent<Text>();
 
             var updateSubscription = Observable.EveryUpdate().Subscribe(x =>
             {
                 var timeLeft = effect.Effect.Duration - effect.ActiveTime;
                 var timeSpan = TimeSpan.FromMilliseconds(timeLeft);
-                buffText.text = string.Format("{0:00}:{1:00}", timeSpan.Minutes, timeSpan.Seconds);
+                buffText.text = $"{timeSpan.Minutes:00}:{timeSpan.Seconds:00}";
             });
 
             _effectSubscription.Add(effect, updateSubscription);
@@ -76,8 +71,8 @@ namespace Assets.Examples.BuffHud.ViewResolvers
 
         public GameObject ResolveView(ActiveEffect effect)
         {
-            var gameObject = Object.Instantiate(_buffPrefab, Vector3.zero, Quaternion.identity) as GameObject;
-            gameObject.name = string.Format("buff-{0}", effect.Effect.Id);
+            var gameObject = GameObject.Instantiate(_buffPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+            gameObject.name = $"buff-{effect.Effect.Id}";
             return gameObject;
         }
 
@@ -91,9 +86,9 @@ namespace Assets.Examples.BuffHud.ViewResolvers
 
         public void RemoveViewForEffect(ActiveEffect effect)
         {
-            var effectGoName = string.Format("buff-{0}", effect.Effect.Id);
-            var effectGo = _buffPanelGameObject.transform.FindChild(effectGoName);
-            Object.Destroy(effectGo.gameObject);
+            var effectGoName = $"buff-{effect.Effect.Id}";
+            var effectGo = _buffPanelGameObject.transform.Find(effectGoName);
+            GameObject.Destroy(effectGo.gameObject);
         }
 
         public void EntityAdded(CollectionAddEvent<ActiveEffect> collectionAddEvent)

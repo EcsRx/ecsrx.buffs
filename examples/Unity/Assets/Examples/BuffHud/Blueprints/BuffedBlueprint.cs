@@ -1,9 +1,10 @@
 ﻿using Assets.EcsRx.Examples.Database;
-using Assets.EcsRxPlugins.Buffs.Components;
 using EcsRx.Blueprints;
 using EcsRx.Entities;
-using EcsRx.Unity.Components;
-using EcsRxPlugins.Buffs;
+using EcsRx.Extensions;
+using EcsRx.Plugins.Buffs.Components;
+using EcsRx.Plugins.Buffs.Models;
+using EcsRx.Plugins.Views.Components;
 
 namespace Assets.EcsRx.Examples.Blueprints
 {

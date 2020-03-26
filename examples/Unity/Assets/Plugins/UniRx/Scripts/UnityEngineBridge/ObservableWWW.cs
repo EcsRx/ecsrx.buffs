@@ -6,8 +6,13 @@ using UnityEngine;
 using ObservableUnity = UniRx.Observable;
 #endif
 
+#if UNITY_2018_3_OR_NEWER
+#pragma warning disable CS0618
+#endif
+
 namespace UniRx
 {
+    using System.Threading;
 #if !(UNITY_METRO || UNITY_WP8) && (UNITY_4_4 || UNITY_4_3 || UNITY_4_2 || UNITY_4_1 || UNITY_4_0_1 || UNITY_4_0 || UNITY_3_5 || UNITY_3_4 || UNITY_3_3 || UNITY_3_2 || UNITY_3_1 || UNITY_3_0_0 || UNITY_3_0 || UNITY_2_6_1 || UNITY_2_6)
     // Fallback for Unity versions below 4.5
     using Hash = System.Collections.Hashtable;
@@ -20,6 +25,9 @@ namespace UniRx
     using HashEntry = System.Collections.Generic.KeyValuePair<string, string>;
 #endif
 
+#if UNITY_2018_3_OR_NEWER
+    [Obsolete("Use UnityWebRequest, a fully featured replacement which is more efficient and has additional features")]
+#endif
     public static partial class ObservableWWW
     {
         public static IObservable<string> Get(string url, Hash headers = null, IProgress<float> progress = null)
@@ -181,7 +189,6 @@ namespace UniRx
 
                 if (cancel.IsCancellationRequested)
                 {
-                    if (!www.isDone) yield return www; // workaround for freeze bug of dispose WWW when WWW is not completed
                     yield break;
                 }
 
@@ -240,7 +247,6 @@ namespace UniRx
 
                 if (cancel.IsCancellationRequested)
                 {
-                    if (!www.isDone) yield return www; // workaround for freeze bug of dispose WWW when WWW is not completed
                     yield break;
                 }
 
@@ -299,7 +305,6 @@ namespace UniRx
 
                 if (cancel.IsCancellationRequested)
                 {
-                    if (!www.isDone) yield return www; // workaround for freeze bug of dispose WWW when WWW is not completed
                     yield break;
                 }
 
@@ -358,7 +363,6 @@ namespace UniRx
 
                 if (cancel.IsCancellationRequested)
                 {
-                    if (!www.isDone) yield return www; // workaround for freeze bug of dispose WWW when WWW is not completed
                     yield break;
                 }
 
@@ -432,3 +436,7 @@ namespace UniRx
         }
     }
 }
+
+#if UNITY_2018_3_OR_NEWER
+#pragma warning restore CS0618
+#endif

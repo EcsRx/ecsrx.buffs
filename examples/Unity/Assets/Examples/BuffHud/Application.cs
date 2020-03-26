@@ -1,12 +1,12 @@
 ﻿using Assets.EcsRx.Examples.Blueprints;
 using Assets.EcsRx.Examples.Database;
-using Assets.EcsRxPlugins.Buffs;
-using EcsRx.Unity;
+using EcsRx.Plugins.Buffs;
+using EcsRx.Zenject;
 using Zenject;
 
 namespace Assets.EcsRx.Examples
 {
-    public class Application : EcsRxApplication
+    public class Application : EcsRxApplicationBehaviour
     {
         [Inject]
         public EffectDatabase Database { get; private set; }
@@ -16,18 +16,18 @@ namespace Assets.EcsRx.Examples
             Database = database;
         }
 
-        protected override void ApplicationStarting()
+        protected override void LoadPlugins()
         {
+            base.LoadPlugins();
             RegisterPlugin(new BuffsPlugin());
-            RegisterAllBoundSystems();
         }
 
         protected override void ApplicationStarted()
         {
-            var defaultPool = PoolManager.GetPool();
+            var collection = EntityDatabase.GetCollection();
 
             var buffBlueprint = new BuffedBlueprint(Database);
-            var buffedEntity = defaultPool.CreateEntity(buffBlueprint);
+            var buffedEntity = collection.CreateEntity(buffBlueprint);
         }
     }
 }
