@@ -4,7 +4,7 @@ There are not many systems in play, there is one to track effects that are added
 
 ## EffectAddedSystem
 
-This just listends to an effect being added and then raises an event for it happening, this may be useful for updating your HUD or
+This just listens to an effect being added and then raises an event for it happening, this may be useful for updating your HUD or
 having some sort of visual effect on the character.
 
 ## EffectTimingSystem
