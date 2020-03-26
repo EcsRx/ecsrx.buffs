@@ -1,0 +1,381 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "EcsRx.Plugins.Buffs.Example/1.0.0": {
+        "dependencies": {
+          "EcsRx.Infrastructure": "3.9.57",
+          "EcsRx.Infrastructure.Ninject": "3.9.57",
+          "EcsRx.Plugins.Buffs": "1.0.0",
+          "Ninject": "3.3.4"
+        },
+        "runtime": {
+          "EcsRx.Plugins.Buffs.Example.dll": {}
+        }
+      },
+      "EcsRx/3.9.57": {
+        "dependencies": {
+          "EcsRx.MicroRx": "3.9.57"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "EcsRx.Infrastructure/3.9.57": {
+        "dependencies": {
+          "EcsRx": "3.9.57"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.Infrastructure.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "EcsRx.Infrastructure.Ninject/3.9.57": {
+        "dependencies": {
+          "EcsRx.Infrastructure": "3.9.57",
+          "Ninject": "3.3.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.Infrastructure.Ninject.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "EcsRx.MicroRx/3.9.57": {
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.MicroRx.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "EcsRx.Plugins.ReactiveSystems/3.9.57": {
+        "dependencies": {
+          "EcsRx": "3.9.57",
+          "EcsRx.Infrastructure": "3.9.57"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.Plugins.ReactiveSystems.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "EcsRx.ReactiveData/3.9.57": {
+        "dependencies": {
+          "System.Reactive.Core": "4.1.0",
+          "System.Reactive.Linq": "4.1.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/EcsRx.ReactiveData.dll": {
+            "assemblyVersion": "3.9.57.0",
+            "fileVersion": "3.9.57.0"
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
+      "Ninject/3.3.4": {
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ninject.dll": {
+            "assemblyVersion": "3.3.4.0",
+            "fileVersion": "3.3.4.0"
+          }
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Reactive/4.1.0": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.0.331"
+          }
+        }
+      },
+      "System.Reactive.Core/4.1.0": {
+        "dependencies": {
+          "System.Reactive": "4.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Core.dll": {
+            "assemblyVersion": "3.0.6000.0",
+            "fileVersion": "3.0.6000.0"
+          }
+        }
+      },
+      "System.Reactive.Linq/4.1.0": {
+        "dependencies": {
+          "System.Reactive": "4.1.0",
+          "System.Threading.Tasks.Extensions": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.Linq.dll": {
+            "assemblyVersion": "3.0.6000.0",
+            "fileVersion": "3.0.6000.0"
+          }
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.ILGeneration/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks.Extensions/4.5.1": {},
+      "EcsRx.Plugins.Buffs/1.0.0": {
+        "dependencies": {
+          "EcsRx": "3.9.57",
+          "EcsRx.Infrastructure": "3.9.57",
+          "EcsRx.Plugins.ReactiveSystems": "3.9.57",
+          "EcsRx.ReactiveData": "3.9.57"
+        },
+        "runtime": {
+          "EcsRx.Plugins.Buffs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EcsRx.Plugins.Buffs.Example/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EcsRx/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-32+crOeclLjELedAXbCMYt4w2GFIBZvKYe3R/jNpdOlCqc8DMDbFqpTQP+YfJy4P74KeT3tUnwE1iBbdYRpeBw==",
+      "path": "ecsrx/3.9.57",
+      "hashPath": "ecsrx.3.9.57.nupkg.sha512"
+    },
+    "EcsRx.Infrastructure/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VlvSAKT7eMwyek8+UmTtntCWobSGvga4RI065JaTT5Q1h/Bd+I+h+wEnw/1Q5GbuJNXSs2Fhbx3HRJf007l1VA==",
+      "path": "ecsrx.infrastructure/3.9.57",
+      "hashPath": "ecsrx.infrastructure.3.9.57.nupkg.sha512"
+    },
+    "EcsRx.Infrastructure.Ninject/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wHm9z82w5SMFXTP68DTVRTR+fCjFCdVbUoi6YsnckFSjyP7s0om3BNp2Hu4lOIMM+O34pKVvci+dUP+jhSQm4Q==",
+      "path": "ecsrx.infrastructure.ninject/3.9.57",
+      "hashPath": "ecsrx.infrastructure.ninject.3.9.57.nupkg.sha512"
+    },
+    "EcsRx.MicroRx/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z5p0qrU+9TERULqY5m5SKPSP/Xw+Y8vEtOqV/SlLJm6z4tMTiOfPfRozzInjBSkmHVlgMaLko8zC69tntIfqIA==",
+      "path": "ecsrx.microrx/3.9.57",
+      "hashPath": "ecsrx.microrx.3.9.57.nupkg.sha512"
+    },
+    "EcsRx.Plugins.ReactiveSystems/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AtKR0e+7/k+9yVLaw4obElqCxu/WR2Y1Fhcit5oMLsdtQJ+wgY5Hjbsp4A26eVD2j/YLGLwbDjtGhEyUz0qJWw==",
+      "path": "ecsrx.plugins.reactivesystems/3.9.57",
+      "hashPath": "ecsrx.plugins.reactivesystems.3.9.57.nupkg.sha512"
+    },
+    "EcsRx.ReactiveData/3.9.57": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UZa5DbdLwJVKTwGtTE0YrD80eeKiXt1QD3Vi90Kbk+862sRj3QMB2Kmff3V4m1tQ1wq6jSe+eR7S/roYKasGeg==",
+      "path": "ecsrx.reactivedata/3.9.57",
+      "hashPath": "ecsrx.reactivedata.3.9.57.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Platforms/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BbjXMBRg8Go5Elzp88ZH9cJNmY+s5uBd3EpnLXZqApwS1RmNH18tpF4NEsi++ibh6wfJuvr03LB35VV4iROD0A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6MTXG1lx65k/ebL9EpkbnYy8CEearqCcm+fqk69bsO0HU+7TTiQ/MYCywYkcwUKMOdLWSQmUpG9f67dqK7pWng==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
+    },
+    "Ninject/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
+      "path": "ninject/3.3.4",
+      "hashPath": "ninject.3.3.4.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P+U7f0JFmMqoSFFO+FlA8blwUKdINDSX1YOhUSRI9OQLY9SZFI4ze7Qx3ajTexrdJsBN2StjtOEGhIdrQwHibQ==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Reactive/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HK7h2XA9PM5Znh9dBYM1wi7J7ZpnyJqKhol4xvoij9b0uifeY8iIrN8SU0bWftmVdUPR6D8kB6XH3uJBx/Clug==",
+      "path": "system.reactive/4.1.0",
+      "hashPath": "system.reactive.4.1.0.nupkg.sha512"
+    },
+    "System.Reactive.Core/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-80zftH2AP/2PkWQHiZzOxfpfG4w9e1bOmhnBB13X3poz8HkNh32BOJAfFItjSa6eqhaoAp/BuWncwzzfoKH8dA==",
+      "path": "system.reactive.core/4.1.0",
+      "hashPath": "system.reactive.core.4.1.0.nupkg.sha512"
+    },
+    "System.Reactive.Linq/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hZxmIfrxs7v6bUeAwB70qarIlURJxN+4XV6sKxKANOtymO2vscFSuNwZhcreFcaSXqyPWLu7LbXaW/ytxNuMng==",
+      "path": "system.reactive.linq/4.1.0",
+      "hashPath": "system.reactive.linq.4.1.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gWnkwUkLvWt/XZlv/i5Nj+bfkvBnbJ/cQ1y4SIFn0dAe/1U6Ro3EsN3+hgJfstun7LcUovCibkoDx/Jimeys/w==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.ILGeneration/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CxFgUyYMC4YMv0JyzLIm4hTct6eLPTR26x7alFUxsaNzsmE+EwA/CGWrTB8itZaagjCAVvWl8nqVeWFZ8jX8xg==",
+      "path": "system.reflection.emit.ilgeneration/4.3.0",
+      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Emit.Lightweight/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2V0VVEds7J7jvdMOQxUYOUk7392XiQFjLFtBpvFiz3AUYBANK4vNdOoe/a4BOt/WXrbOoN5HpGjkd2wzyJ22AQ==",
+      "path": "system.reflection.emit.lightweight/4.3.0",
+      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zDvMf/UJmgswM2pTqq7USHTuW6l4XZelRu4NcsTjSTUGmx8eOd/WGOBbopjcrz09WkP9Cunwi85A8nV6RjyX8w==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hcuw1HOjP/KK2JsFJyZcKRGzzzYEaNM6ptuRlR57NWeujRFYhDU7yLOYGA8qukR2o5fbI2bS8q8jL4mpVuBaoQ==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BB4Y4G5QH6jPlnI4l8gpD0QxbaUFUUz5478TB2fxLB4pgZbJSKDLQfDaReCbopPPJB5LkwskLo86mXBq2KzpHg==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rTY5UI9HeqOCm2B8zjh24+bFhdL/ge07QatHL33L3BwatrUZvf4oPXYgTOkBV21NTRJj3wVzdRLfd7IBaXnUhw==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gOnY3YoP0jypmu9DxHMPJ7EUOslOpaw/3hzN0vcirjL+ksNdvU//O4+CZO6nz0E/EnKN96P6N+oHufSUKsK6Sw==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WSKUTtLhPR8gllzIWO2x6l4lmAIfbyMAiTlyXAis4QBDonXK4b4S6F8zGARX4/P8wH3DH+sLdhamCiHn+fTU1A==",
+      "path": "system.threading.tasks.extensions/4.5.1",
+      "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
+    },
+    "EcsRx.Plugins.Buffs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

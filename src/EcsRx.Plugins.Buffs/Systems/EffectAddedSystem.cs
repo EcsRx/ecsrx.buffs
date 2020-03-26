@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Linq;
 using EcsRx.Entities;
 using EcsRx.Events;
 using EcsRx.Extensions;
@@ -23,8 +24,10 @@ namespace EcsRx.Plugins.Buffs.Systems
 
         public IObservable<ActiveEffect> ReactToData(IEntity entity)
         {
-            var effectableComponent = entity.GetComponent<EffectableComponent>();
-            return effectableComponent.ActiveEffects.ObserveAdd();
+            return entity.GetComponent<EffectableComponent>()
+                .ActiveEffects
+                .ObserveAdd()
+                .Select(x => x.Value);
         }
 
         public void Process(IEntity entity, ActiveEffect reactionData)

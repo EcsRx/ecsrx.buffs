@@ -10,9 +10,9 @@ namespace EcsRx.Plugins.Buffs
 {
     public class BuffsPlugin : IEcsRxPlugin
     {
-        public string Name { get { return "Buffs Plugin"; } }
-        public Version Version { get { return new Version(0,1,0); } }
-        
+        public string Name => "Buffs Plugin";
+        public Version Version => new Version(0,1,0);
+
         public void SetupDependencies(IDependencyContainer container)
         {
             container.Bind<EffectAddedSystem>();

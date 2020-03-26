@@ -1,32 +1,34 @@
-﻿using EcsRx.Entities;
+﻿using System;
+using EcsRx.Entities;
 using EcsRx.Events;
+using EcsRx.Extensions;
 using EcsRx.Groups;
 using EcsRx.Plugins.Buffs.Components;
 using EcsRx.Plugins.Buffs.Events;
+using EcsRx.Plugins.Buffs.Extensions;
+using EcsRx.Scheduling;
+using EcsRx.Systems;
 
 namespace EcsRx.Plugins.Buffs.Systems
 {
-    public class EffectTimingSystem : IReactToGroupSystem
+    public class EffectTimingSystem : IBasicSystem
     {
-        public IEventSystem EventSystem { get; private set; }
+        public IEventSystem EventSystem { get; }
+        public ITimeTracker TimeTracker { get; }
 
-        public IGroup TargetGroup
-        {
-            get { return new Group(typeof(EffectableComponent)); }
-        }
+        public IGroup Group => new Group(typeof(EffectableComponent));
+        
 
-        public EffectTimingSystem(IEventSystem eventSystem)
+        public EffectTimingSystem(IEventSystem eventSystem, ITimeTracker timeTracker)
         {
             EventSystem = eventSystem;
+            TimeTracker = timeTracker;
         }
-
-        public IObservable<IGroupAccessor> ReactToGroup(IGroupAccessor @group)
-        { return Observable.EveryUpdate().Select(x => @group); }
-
-        public void Execute(IEntity entity)
+        
+        public void Process(IEntity entity)
         {
             var effectableComponent = entity.GetComponent<EffectableComponent>();
-            var deltaTimeInMilliseconds = Time.deltaTime * 1000;
+            var deltaTimeInMilliseconds = TimeTracker.ElapsedTime.DeltaTime.Milliseconds;
             
             for (var i = effectableComponent.ActiveEffects.Count-1; i >= 0; i--)
             {
