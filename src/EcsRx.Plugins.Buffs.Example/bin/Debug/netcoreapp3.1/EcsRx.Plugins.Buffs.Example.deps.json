@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v3.1": {
       "EcsRx.Plugins.Buffs.Example/1.0.0": {
         "dependencies": {
-          "EcsRx.Infrastructure": "3.9.57",
-          "EcsRx.Infrastructure.Ninject": "3.9.57",
+          "EcsRx.Infrastructure": "3.11.68",
+          "EcsRx.Infrastructure.Ninject": "3.11.68",
           "EcsRx.Plugins.Buffs": "1.0.0",
           "Ninject": "3.3.4"
         },
@@ -17,69 +17,69 @@
           "EcsRx.Plugins.Buffs.Example.dll": {}
         }
       },
-      "EcsRx/3.9.57": {
+      "EcsRx/3.11.68": {
         "dependencies": {
-          "EcsRx.MicroRx": "3.9.57"
+          "EcsRx.MicroRx": "3.11.68"
         },
         "runtime": {
           "lib/netstandard2.0/EcsRx.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
-      "EcsRx.Infrastructure/3.9.57": {
+      "EcsRx.Infrastructure/3.11.68": {
         "dependencies": {
-          "EcsRx": "3.9.57"
+          "EcsRx": "3.11.68"
         },
         "runtime": {
           "lib/netstandard2.0/EcsRx.Infrastructure.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
-      "EcsRx.Infrastructure.Ninject/3.9.57": {
+      "EcsRx.Infrastructure.Ninject/3.11.68": {
         "dependencies": {
-          "EcsRx.Infrastructure": "3.9.57",
+          "EcsRx.Infrastructure": "3.11.68",
           "Ninject": "3.3.4"
         },
         "runtime": {
           "lib/netstandard2.0/EcsRx.Infrastructure.Ninject.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
-      "EcsRx.MicroRx/3.9.57": {
+      "EcsRx.MicroRx/3.11.68": {
         "runtime": {
           "lib/netstandard2.0/EcsRx.MicroRx.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
-      "EcsRx.Plugins.ReactiveSystems/3.9.57": {
+      "EcsRx.Plugins.ReactiveSystems/3.11.68": {
         "dependencies": {
-          "EcsRx": "3.9.57",
-          "EcsRx.Infrastructure": "3.9.57"
+          "EcsRx": "3.11.68",
+          "EcsRx.Infrastructure": "3.11.68"
         },
         "runtime": {
           "lib/netstandard2.0/EcsRx.Plugins.ReactiveSystems.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
-      "EcsRx.ReactiveData/3.9.57": {
+      "EcsRx.ReactiveData/3.11.68": {
         "dependencies": {
           "System.Reactive.Core": "4.1.0",
           "System.Reactive.Linq": "4.1.0"
         },
         "runtime": {
           "lib/netstandard2.0/EcsRx.ReactiveData.dll": {
-            "assemblyVersion": "3.9.57.0",
-            "fileVersion": "3.9.57.0"
+            "assemblyVersion": "3.11.68.0",
+            "fileVersion": "3.11.68.0"
           }
         }
       },
@@ -201,10 +201,10 @@
       "System.Threading.Tasks.Extensions/4.5.1": {},
       "EcsRx.Plugins.Buffs/1.0.0": {
         "dependencies": {
-          "EcsRx": "3.9.57",
-          "EcsRx.Infrastructure": "3.9.57",
-          "EcsRx.Plugins.ReactiveSystems": "3.9.57",
-          "EcsRx.ReactiveData": "3.9.57"
+          "EcsRx": "3.11.68",
+          "EcsRx.Infrastructure": "3.11.68",
+          "EcsRx.Plugins.ReactiveSystems": "3.11.68",
+          "EcsRx.ReactiveData": "3.11.68"
         },
         "runtime": {
           "EcsRx.Plugins.Buffs.dll": {}
@@ -218,47 +218,47 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EcsRx/3.9.57": {
+    "EcsRx/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-32+crOeclLjELedAXbCMYt4w2GFIBZvKYe3R/jNpdOlCqc8DMDbFqpTQP+YfJy4P74KeT3tUnwE1iBbdYRpeBw==",
-      "path": "ecsrx/3.9.57",
-      "hashPath": "ecsrx.3.9.57.nupkg.sha512"
+      "sha512": "sha512-TerUsv1Oyrdgc4HtRzH5WrsouQh8GwI/qTVBU9frtcjXkJhl8oa5WQPrM7Kg+ldRaznkwE+VLa4r2oAF+Dq+qA==",
+      "path": "ecsrx/3.11.68",
+      "hashPath": "ecsrx.3.11.68.nupkg.sha512"
     },
-    "EcsRx.Infrastructure/3.9.57": {
+    "EcsRx.Infrastructure/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-VlvSAKT7eMwyek8+UmTtntCWobSGvga4RI065JaTT5Q1h/Bd+I+h+wEnw/1Q5GbuJNXSs2Fhbx3HRJf007l1VA==",
-      "path": "ecsrx.infrastructure/3.9.57",
-      "hashPath": "ecsrx.infrastructure.3.9.57.nupkg.sha512"
+      "sha512": "sha512-ZNb2YTAsbo/OAFHEJdcCa0ty7kdkUW5Hl06dJUki7I1SGlgLWPAKqAxHhOmTDWYVd36SAHpsPfofpC3JpUgXUQ==",
+      "path": "ecsrx.infrastructure/3.11.68",
+      "hashPath": "ecsrx.infrastructure.3.11.68.nupkg.sha512"
     },
-    "EcsRx.Infrastructure.Ninject/3.9.57": {
+    "EcsRx.Infrastructure.Ninject/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wHm9z82w5SMFXTP68DTVRTR+fCjFCdVbUoi6YsnckFSjyP7s0om3BNp2Hu4lOIMM+O34pKVvci+dUP+jhSQm4Q==",
-      "path": "ecsrx.infrastructure.ninject/3.9.57",
-      "hashPath": "ecsrx.infrastructure.ninject.3.9.57.nupkg.sha512"
+      "sha512": "sha512-Ri/+kTizX2nwgYzDmVEXBK2N69QsPqtM1pYP8724KeBORXKZL+SLBzkQxzkvMEYqxsItiHvg7RTiSUhqNrhylQ==",
+      "path": "ecsrx.infrastructure.ninject/3.11.68",
+      "hashPath": "ecsrx.infrastructure.ninject.3.11.68.nupkg.sha512"
     },
-    "EcsRx.MicroRx/3.9.57": {
+    "EcsRx.MicroRx/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z5p0qrU+9TERULqY5m5SKPSP/Xw+Y8vEtOqV/SlLJm6z4tMTiOfPfRozzInjBSkmHVlgMaLko8zC69tntIfqIA==",
-      "path": "ecsrx.microrx/3.9.57",
-      "hashPath": "ecsrx.microrx.3.9.57.nupkg.sha512"
+      "sha512": "sha512-3DtWwd8YRd9vyqo72vcrcW9BodWpRh71cSMVEmVHJdsMA4FiTlsdJY6XAY5u/P0zekdntyf+8+555hzxuD2IZg==",
+      "path": "ecsrx.microrx/3.11.68",
+      "hashPath": "ecsrx.microrx.3.11.68.nupkg.sha512"
     },
-    "EcsRx.Plugins.ReactiveSystems/3.9.57": {
+    "EcsRx.Plugins.ReactiveSystems/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AtKR0e+7/k+9yVLaw4obElqCxu/WR2Y1Fhcit5oMLsdtQJ+wgY5Hjbsp4A26eVD2j/YLGLwbDjtGhEyUz0qJWw==",
-      "path": "ecsrx.plugins.reactivesystems/3.9.57",
-      "hashPath": "ecsrx.plugins.reactivesystems.3.9.57.nupkg.sha512"
+      "sha512": "sha512-kpEwmR3ddOs2/wglDyZ4HaJm3FZtuSOyADad4P3yddo6ngDARnUV6yCMpqjJ6tUc53oahKRoB+svYtTq0LLddQ==",
+      "path": "ecsrx.plugins.reactivesystems/3.11.68",
+      "hashPath": "ecsrx.plugins.reactivesystems.3.11.68.nupkg.sha512"
     },
-    "EcsRx.ReactiveData/3.9.57": {
+    "EcsRx.ReactiveData/3.11.68": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UZa5DbdLwJVKTwGtTE0YrD80eeKiXt1QD3Vi90Kbk+862sRj3QMB2Kmff3V4m1tQ1wq6jSe+eR7S/roYKasGeg==",
-      "path": "ecsrx.reactivedata/3.9.57",
-      "hashPath": "ecsrx.reactivedata.3.9.57.nupkg.sha512"
+      "sha512": "sha512-6K4DggBTekjj1zOqMwH1yvZ4brcjmhOpPSs4KkAztyPTUqttglIaL1KzpMMg0FF4tT8VJCZ0ngxcsOf+FmPuZg==",
+      "path": "ecsrx.reactivedata/3.11.68",
+      "hashPath": "ecsrx.reactivedata.3.11.68.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",

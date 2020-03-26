@@ -22,7 +22,7 @@ namespace EcsRx.Plugins.Buffs.Example
 
         protected override void ApplicationStarted()
         {
-            var defaultCollection = EntityCollectionManager.GetCollection();
+            var defaultCollection = EntityDatabase.GetCollection();
             var buffBlueprint = new BuffedBlueprint(Database);
             defaultCollection.CreateEntity(buffBlueprint);
         }
